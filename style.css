@@ -91,18 +91,20 @@ body, html {
 }
 
 .links a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
   display: inline-block;
-  margin: 1px;
 	padding: 0.25em 0.5em 0.25em 0.5em;
   text-decoration: none;
-	color: cornflowerblue;
+	font-weight: 300;
+	color: wheat;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
 }
 .links-main a{
 		font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	display: inline-block;
-	font-size: 3vw;
+	font-weight: 400;
+	font-size: 1.3rem;
   margin-top: 10px;
 	padding: 0.25em 0.5em 0.25em 0.5em;
   text-decoration: none;
@@ -147,8 +149,8 @@ footer {
 footer a {
   text-decoration: none;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  color: cornflowerblue;
-  font-size: 1.2rem;
+  color: wheat;
+  font-size: 1.1rem;
   margin: 5px;
   padding: 5px 10px;
   border-radius: 3px;
@@ -167,6 +169,9 @@ footer a {
 	.content p {
   font-size: 1rem;
 }
+	.links-main a{
+			font-size: 1.6rem;
+	}
 
 	
 }
