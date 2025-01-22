@@ -40,9 +40,12 @@ body, html {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-	  background-image: url('hen.jpg'); /* Fallback image */
-  background-size: cover;
-  background-position: center;
+/* fallback image Background */
+	background-image: url('hen.jpg'); /* Fallback image */
+ 	background-size: cover;
+ 	background-position: center;
+	filter: blur(10px); /* Initial blur for fallback */
+  	transition: filter 0.5s ease; /* Smooth transition when removing blur */
 }
 
 .background-video, .label-bg, .farm-bg {
@@ -52,6 +55,21 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* Remove blur when the video starts playing */
+.video-background:has(video:playing), 
+.image-background:has(video:playing) {
+  filter: none; /* Clear the blur */
+}
+
+/* Fade in the video */
+.background-video {
+  opacity: 0; /* Initially hide video */
+  transition: opacity 0.5s ease; /* Smooth fade-in */
+}
+
+.background-video:playing {
+  opacity: 1; /* Video becomes visible */
 }
 
 .label-bg {
