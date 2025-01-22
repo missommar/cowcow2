@@ -44,7 +44,7 @@ body, html {
 	background-image: url('hen.jpg'); /* Fallback image */
  	background-size: cover;
  	background-position: center;
-	filter: blur(10px); /* Initial blur for fallback */
+	/* filter: blur(10px); Initial blur for fallback */
   	transition: filter 0.5s ease; /* Smooth transition when removing blur */
 }
 
