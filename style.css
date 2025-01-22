@@ -41,6 +41,7 @@ body, html {
   height: 100vh;
   overflow: hidden;
 /* fallback image Background */
+	backgorund-color: black;
 	background-image: url('hen.jpg'); /* Fallback image */
  	background-size: cover;
  	background-position: center;
