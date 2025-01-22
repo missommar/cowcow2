@@ -42,7 +42,7 @@ body, html {
   overflow: hidden;
 /* fallback image Background */
 	backgorund-color: black;
-	background-image: url('hen.jpg'); /* Fallback image */
+	background-image: url('hen.JPG'); /* Fallback image */
  	background-size: cover;
  	background-position: center;
   	transition: filter 0.5s ease; /* Smooth transition when removing blur */
