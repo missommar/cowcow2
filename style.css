@@ -33,6 +33,10 @@ p{
 body, html {
   height: 100%;
 }
+.signup{
+
+	margin-top:20px;
+}
 
 /* Fullscreen Video Background */
 .video-background, .image-background {
