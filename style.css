@@ -176,6 +176,10 @@ footer a {
   src: url('bnp.woff2') format('woff2'), url('bnp.woff2') format('woff');
   font-weight: 200; /* You can define weights if needed */
 }
+@font-face{
+	font-family: 'GT_custom';
+	src: url('GT-italic.woff2') format('woff2'), url('GT-book.woff2') format('woff');
+}
 @media only screen and (min-width: 768px) {
 	p{
 	width: 45vw;
