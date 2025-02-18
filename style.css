@@ -1,54 +1,102 @@
-/* Reset */
+/* ===================== */
+/* Global Reset & Basics */
+/* ===================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-h1{
-	font-family: 'customFont';
-	font-weight: 100;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-h2{
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	font-weight: 400;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-h3{
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	font-weight: 400;
-	text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.2);
-	
-}
-p{
-	font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
-	font-weight: normal;
-  	scroll-behavior: smooth;
-	width: 80vw;
-	line-height: 1.3;
-}
-/* General Styles */
 body, html {
+  margin: 0;
+  padding: 0;
   height: 100%;
+  width: 100%;
+  background-color: black; /* Ensures no white borders */
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
-.signup{
 
-	margin-top:20px;
+/* ================= */
+/* Font Definitions */
+/* ================= */
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('bnp.woff2') format('woff2'), url('bnp.woff') format('woff');
+  font-weight: 200;
 }
 
-/* Fullscreen Video Background */
+@font-face {
+  font-family: 'GT_custom_italic';
+  src: url('GT-italic.woff2') format('woff2'), url('GT-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GT_custom';
+  src: url('GT-book.woff2') format('woff2'), url('GT-book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'orator';
+  src: url('orator.woff2') format('woff2'), url('orator.woff') format('woff');
+}
+
+/* ================= */
+/* Typography Styles */
+/* ================= */
+
+h1 {
+  font-family: 'GT_custom';
+  font-weight: 100;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3 {
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+  font-weight: normal;
+  scroll-behavior: smooth;
+  width: 80vw;
+  line-height: 1.3;
+}
+
+/* ============================= */
+/* Header - "Cowcow" Title & Nav */
+/* ============================= */
+
+.header-title a {
+  font-family: 'customFont';
+  font-weight: 100;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjusted to reduce space */
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================== */
+/* Video & Image Background */
+/* ======================== */
+
 .video-background, .image-background {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-/* fallback image Background */
-	backgorund-color: black;
-	background-image: url('hen.JPG'); /* Fallback image */
- 	background-size: cover;
- 	background-position: center;
+  background-color: black;
+  background-image: url('hen.JPG'); /* Fallback image */
+  background-size: cover;
+  background-position: center;
 }
 
 .background-video, .label-bg, .farm-bg {
@@ -68,7 +116,10 @@ body, html {
   background: url('far.jpg') center/cover no-repeat;
 }
 
+/* =================== */
 /* Centered Content */
+/* =================== */
+
 .title, .content {
   position: absolute;
   top: 50%;
@@ -76,17 +127,11 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  
 }
 
 .title h1 {
   font-size: 7vw;
-	width: 100%;
-}
-
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  width: 100%;
 }
 
 .content h1 {
@@ -94,115 +139,87 @@ body, html {
   margin-bottom: 20px;
 }
 
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
 .content p {
   font-size: 0.9rem;
   margin: 20px 0;
 }
 
-.links a {
-	font-family: 'orator', monospace;
-	font-weight: 200;
-	/*text-transform: lowercase;*/
-	/* font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	font-weight: 300; */
-  	display: inline-block;
-	padding: 0.25em 0.5em 0.25em 0.5em;
-  	text-decoration: none;
-	color: white;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  	transition: all 0.3s ease;
-}
-.links-main a{
-	/*font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	font-weight: 400;*/
-	font-family: 'orator', monospace;
-	font-weight: 200;
-	/*text-transform: lowercase;*/
-	display: inline-block;
-	font-size: 0.9rem;
-  	margin-top: 10px;
-	padding: 0.25em 0.5em 0.25em 0.5em;
-  	text-decoration: none;
-	color: white;
-	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
- 	transition: all 0.3s ease;
+/* ======================= */
+/* Navigation & Links */
+/* ======================= */
+
+.links a, .links-main a {
+  font-family: 'orator', monospace;
+  font-weight: 200;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
-.links a:hover, footer a:hover, .links-main a:hover {
-	color: whitesmoke;
-	text-decoration: underline;
-  	background-color: rgba(222, 222, 222, 0.1);
-	backdrop-filter: blur(4px);
+.links-main a {
+  font-size: 0.9rem;
+  margin-top: 0px; /* Reduced extra space */
 }
 
-/* Header and Footer */
-.header-title a{
-	font-family: 'customFont';
-	font-weight: 100;
-	text-decoration: none;
-	cursor:pointer;
-  	position: absolute;
-  	top: 40px;
-  	width: 100%;
-  	text-align: center;
-  	font-size: 1.3rem;
-  	color: white;
-  	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.links a:hover, .links-main a:hover, footer a:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+  background-color: rgba(222, 222, 222, 0.1);
+  backdrop-filter: blur(4px);
 }
 
-/* Footer Styling */
+/* ============= */
+/* Footer Styles */
+/* ============= */
+
 footer {
-  	position: absolute; /* Sticks footer to the bottom of its container */
-  	bottom: 0; /* Anchors to the bottom */
-  	left: 0;
-  	width: 100%;
-  	text-align: center;
-  	padding: 40px 0;
-  	color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  color: white;
 }
 
 footer a {
-  	text-decoration: none;
-	font-family: "orator", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  	color: white;
- 	font-size: 1rem;
- 	margin: 5px;
- 	padding: 5px 10px;
- 	border-radius: 3px;
- 	transition: background-color 0.3s ease;
-}	
-@font-face {
- 	font-family: 'CustomFont';
-  	src: url('bnp.woff2') format('woff2'), url('bnp.woff2') format('woff');
- 	font-weight: 200; /* You can define weights if needed */
-}
-@font-face{
-	font-family: 'GT_custom_italic';
-	src: url('GT-italic.woff2') format('woff2'), url('GT-italic.woff') format('woff');
-	
-}
-@font-face{
-	font-family: 'GT_custom';
-	src: url('GT-book.woff2') format('woff2'), url('GT-book.woff') format('woff');	
-}
-@font-face{
-	font-family: 'orator';
-	src: url('orator.woff2') format('woff2'), url('orator.woff') format('woff');	
-}
-@media only screen and (min-width: 768px) {
-	p{
-	width: 45vw;
-	line-height: 1.3;
-}
-	.content p {
+  text-decoration: none;
+  font-family: "orator", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  color: white;
   font-size: 1rem;
-}
-	.links-main a{
-			font-size: 1.6rem;
-	}
-	.content h2 {
-  font-size: 2.5rem;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
 }
 
-	
+/* =============== */
+/* Media Queries */
+/* =============== */
+
+@media only screen and (min-width: 768px) {
+  p {
+    width: 45vw;
+    line-height: 1.3;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .links-main a {
+    font-size: 1.6rem;
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+  }
 }
