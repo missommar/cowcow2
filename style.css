@@ -102,7 +102,7 @@ body, html {
 .links a {
 	font-family: 'Orator', monospace;
 	font-weight: 200;
-	text-transform: lowercase;
+	/*text-transform: lowercase;*/
 	/* font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	font-weight: 300; */
   	display: inline-block;
@@ -117,7 +117,7 @@ body, html {
 	font-weight: 400;*/
 	font-family: 'Orator', monospace;
 	font-weight: 200;
-	text-transform: lowercase;
+	/*text-transform: lowercase;*/
 	display: inline-block;
 	font-size: 0.9rem;
   	margin-top: 10px;
