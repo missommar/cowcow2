@@ -178,8 +178,16 @@ footer a {
 }
 @font-face{
 	font-family: 'GT_custom_italic';
-	src: url('GT-italic.woff2') format('woff2');
+	src: url('GT-italic.woff2') format('woff2'), url('GT-italic.woff') format('woff');
 	
+}
+@font-face{
+	font-family: 'GT_custom';
+	src: url('GT-book.woff2') format('woff2'), url('GT-book.woff') format('woff');	
+}
+@font-face{
+	font-family: 'orator';
+	src: url('orator.woff2') format('woff2'), url('orator.woff') format('woff');	
 }
 @media only screen and (min-width: 768px) {
 	p{
