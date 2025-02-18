@@ -53,8 +53,8 @@ h1 {
 }
 
 h2, h3 {
-  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+  font-weight: 200;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
