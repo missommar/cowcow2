@@ -177,8 +177,9 @@ footer a {
   font-weight: 200; /* You can define weights if needed */
 }
 @font-face{
-	font-family: 'GT_custom';
-	src: url('GT-italic.woff2') format('woff2'), url('GT-book.woff2') format('woff');
+	font-family: 'GT_custom_italic';
+	src: url('GT-italic.woff2') format('woff2');
+	
 }
 @media only screen and (min-width: 768px) {
 	p{
