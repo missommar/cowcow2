@@ -23,7 +23,7 @@ h3{
 	
 }
 p{
-	font-family: "GT Sectra Fine", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+	font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
 	font-weight: normal;
   	scroll-behavior: smooth;
 	width: 80vw;
@@ -100,7 +100,7 @@ body, html {
 }
 
 .links a {
-	font-family: 'Orator', monospace;
+	font-family: 'orator', monospace;
 	font-weight: 200;
 	/*text-transform: lowercase;*/
 	/* font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
@@ -115,7 +115,7 @@ body, html {
 .links-main a{
 	/*font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	font-weight: 400;*/
-	font-family: 'Orator', monospace;
+	font-family: 'orator', monospace;
 	font-weight: 200;
 	/*text-transform: lowercase;*/
 	display: inline-block;
@@ -125,13 +125,13 @@ body, html {
   	text-decoration: none;
 	color: white;
 	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  transition: all 0.3s ease;
+ 	transition: all 0.3s ease;
 }
 
 .links a:hover, footer a:hover, .links-main a:hover {
 	color: whitesmoke;
 	text-decoration: underline;
-  background-color: rgba(222, 222, 222, 0.1);
+  	background-color: rgba(222, 222, 222, 0.1);
 	backdrop-filter: blur(4px);
 }
 
@@ -141,40 +141,40 @@ body, html {
 	font-weight: 100;
 	text-decoration: none;
 	cursor:pointer;
-  position: absolute;
-  top: 40px;
-  width: 100%;
-  text-align: center;
-  font-size: 1.3rem;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  	position: absolute;
+  	top: 40px;
+  	width: 100%;
+  	text-align: center;
+  	font-size: 1.3rem;
+  	color: white;
+  	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styling */
 footer {
-  position: absolute; /* Sticks footer to the bottom of its container */
-  bottom: 0; /* Anchors to the bottom */
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 40px 0;
-  color: white;
+  	position: absolute; /* Sticks footer to the bottom of its container */
+  	bottom: 0; /* Anchors to the bottom */
+  	left: 0;
+  	width: 100%;
+  	text-align: center;
+  	padding: 40px 0;
+  	color: white;
 }
 
 footer a {
-  text-decoration: none;
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  color: wheat;
-  font-size: 1.1rem;
-  margin: 5px;
-  padding: 5px 10px;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
+  	text-decoration: none;
+	font-family: "orator", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  	color: white;
+ 	font-size: 1rem;
+ 	margin: 5px;
+ 	padding: 5px 10px;
+ 	border-radius: 3px;
+ 	transition: background-color 0.3s ease;
+}	
 @font-face {
-  font-family: 'CustomFont';
-  src: url('bnp.woff2') format('woff2'), url('bnp.woff2') format('woff');
-  font-weight: 200; /* You can define weights if needed */
+ 	font-family: 'CustomFont';
+  	src: url('bnp.woff2') format('woff2'), url('bnp.woff2') format('woff');
+ 	font-weight: 200; /* You can define weights if needed */
 }
 @font-face{
 	font-family: 'GT_custom_italic';
