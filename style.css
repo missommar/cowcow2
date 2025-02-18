@@ -100,19 +100,25 @@ body, html {
 }
 
 .links a {
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-family: 'Orator', monospace;
+	font-weight: 400;
+	text-transform: lowercase;
+	/* font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight: 300; */
   	display: inline-block;
 	padding: 0.25em 0.5em 0.25em 0.5em;
   	text-decoration: none;
-	font-weight: 300;
 	color: white;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   	transition: all 0.3s ease;
 }
 .links-main a{
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	display: inline-block;
+	/*font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight: 400;*/
+	font-family: 'Orator', monospace;
 	font-weight: 400;
+	text-transform: lowercase;
+	display: inline-block;
 	font-size: 1.1rem;
   	margin-top: 10px;
 	padding: 0.25em 0.5em 0.25em 0.5em;
