@@ -94,6 +94,22 @@ p {
 /* Video & Image Background */
 /* ======================== */
 
+.hero {
+  width: 100%; /* Full width */
+  max-width: 700px; /* Adjust based on design preference */
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%; /* Makes it responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes extra spacing */
+  border-radius: 5px; /* Optional, for softer edges */
+}
+
 .video-background, .image-background {
   position: relative;
   width: 100%;
