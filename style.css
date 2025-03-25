@@ -76,18 +76,24 @@ p {
 /* Header - "Cowcow" Title & Nav */
 /* ============================= */
 
+.header-title {
+  display: flex;
+  justify-content: center; /* Centers links horizontally */
+  gap: 20px; /* Adds spacing between links */
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
 .header-title a {
   font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
   font-weight: 100;
   text-decoration: none;
   cursor: pointer;
-  position: absolute;
-  top: 10px; /* Adjusted to reduce space */
-  width: 100%;
-  text-align: center;
   font-size: 1.3rem;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: inline-block; /* Ensures they behave as inline elements within flex */
 }
 
 /* ======================== */
