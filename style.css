@@ -58,6 +58,12 @@ h2, h3 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.footerLink{
+  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+  font-weight: 200;
+  
+}
+
 p {
   font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
   font-weight: normal;
