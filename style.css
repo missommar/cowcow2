@@ -108,13 +108,13 @@ p {
   object-fit: cover;
 }
 
-.label-bg {
+/*.label-bg {
   background: url('ABG.webp') center/cover no-repeat;
 }
 
 .farm-bg {
   background: url('far.jpg') center/cover no-repeat;
-}
+}*/
 
 /* =================== */
 /* Centered Content */
