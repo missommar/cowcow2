@@ -77,12 +77,11 @@ p {
 /* ============================= */
 
 .header-title {
-  display: flex;
-  justify-content: center; /* Centers links horizontally */
-  gap: 20px; /* Adds spacing between links */
-  position: absolute;
-  top: 10px;
-  width: 100%;
+  position: relative;
+  z-index: 2; /* Ensures the title stays above the image */
+  text-align: center;
+  padding: 20px 0;
+  background: black; /* Optional: adds a background to make it stand out */
 }
 
 .header-title a {
@@ -101,13 +100,13 @@ p {
 /* ======================== */
 
 .hero {
-  width: 100%; /* Full width */
-  max-width: 700px; /* Adjust based on design preference */
-  margin: 0 auto; /* Center horizontally */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: auto; /* Adjusts the height proportionally */
+  display: block;
+  position: relative; /* Keeps it in the document flow */
+  z-index: 1; /* Places it above the background but below text */
 }
+
 
 .hero img {
   width: 100%; /* Makes it responsive */
@@ -192,9 +191,11 @@ p {
   transition: all 0.3s ease;
 }
 
-.links-main a {
-  font-size: 0.7rem;
-  margin-top: 0px; /* Reduced extra space */
+.links-main {
+  position: relative;
+  z-index: 2; /* Ensures the links appear above the image */
+  text-align: center;
+  margin-top: 10px;
 }
 
 .links a:hover, .links-main a:hover, footer a:hover {
