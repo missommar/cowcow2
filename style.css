@@ -182,7 +182,7 @@ p {
 /* Navigation & Links */
 /* ======================= */
 
-.links a, .links-main a, header-title a{
+.links a, .links-main a, .header-title a{
   font-family: 'orator', monospace;
   font-weight: 200;
   display: inline-block;
