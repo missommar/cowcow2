@@ -181,7 +181,7 @@ p {
 /* Navigation & Links */
 /* ======================= */
 
-.links a, .links-main a, .header-title a{
+.links a, .links-main a, .header-title a {
   font-family: 'orator', monospace;
   font-weight: 200;
   display: inline-block;
@@ -199,7 +199,7 @@ p {
   margin-top: 10px;
 }
 
-.links a:hover, .links-main a:hover, footer a:hover {
+.links a:hover, .links-main a:hover, footer a:hover, .header-title a:hover {
   color: whitesmoke;
   text-decoration: underline;
   background-color: rgba(222, 222, 222, 0.1);
