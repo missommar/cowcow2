@@ -81,15 +81,15 @@ p {
   z-index: 2; /* Ensures the title stays above the image */
   text-align: center;
   padding: 20px 0;
-  background: black; /* Optional: adds a background to make it stand out */
+  /*background: black; /* Optional: adds a background to make it stand out */*/
 }
 
 .header-title a {
-  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
-  font-weight: 100;
+  font-family: 'orator', monospace;
+  font-weight: 200;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   display: inline-block; /* Ensures they behave as inline elements within flex */
@@ -180,7 +180,7 @@ p {
 /* Navigation & Links */
 /* ======================= */
 
-.links a, .links-main a {
+.links a, .links-main a header-title a{
   font-family: 'orator', monospace;
   font-weight: 200;
   display: inline-block;
