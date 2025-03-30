@@ -100,7 +100,7 @@ p {
 /* ======================== */
 
 .hero {
-  width: 100%;
+  width: 50%;
   height: auto; /* Adjusts the height proportionally */
   display: block;
   position: relative; /* Keeps it in the document flow */
@@ -109,7 +109,7 @@ p {
 
 
 .hero img {
-  width: 100%; /* Makes it responsive */
+  width: 50%; /* Makes it responsive */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Removes extra spacing */
   border-radius: 5px; /* Optional, for softer edges */
