@@ -174,7 +174,7 @@ p {
   position: relative;
   z-index: 2; /* Ensures the links appear above the image */
   text-align: center;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 #active-link{
   text-decoration: underline;
