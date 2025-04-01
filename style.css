@@ -101,19 +101,18 @@ p {
 /* ======================== */
 
 .hero {
-  height: auto; /* Adjusts the height proportionally */
-  display: block;
-  position: relative; /* Keeps it in the document flow */
-  z-index: 1; /* Places it above the background but below text */
+  display: flex;
+  flex-direction: column;  /* Staplar elementen vertikalt */
+  align-items: center;     /* Centrerar dem horisontellt */
+  text-align: center;      /* Centrerar texten */
+  padding: 50px 20px;      /* Lägger till lite luft runt */
 }
 
 
 .hero img {
-  left: 50%;
-  width: 80%; /* Makes it responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Removes extra spacing */
-  border-radius: 5px; /* Optional, for softer edges */
+  width: 80%; /* Justera storlek efter behov */
+  height: auto; /* Behåller bildens proportioner */
+  margin: 20px 0; /* Lägger till lite luft ovanför och under bilden */
 }
 
 .video-background, .image-background {
