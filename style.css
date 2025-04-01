@@ -170,7 +170,7 @@ p {
 }
 
 .links-main {
-  font-size: 1rem;
+  font-size: 1.1rem;
   position: relative;
   z-index: 2; /* Ensures the links appear above the image */
   text-align: center;
