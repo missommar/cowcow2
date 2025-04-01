@@ -81,20 +81,7 @@ p {
   z-index: 2; /* Ensures the title stays above the image */
   text-align: center;
   padding: 20px 0;
-  /*background: black; /* Optional: adds a background to make it stand out */*/
 }
-/*
-.header-title a {
-  font-family: 'orator', monospace;
-  font-weight: 200;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1rem;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  display: inline-block; /* Ensures they behave as inline elements within flex */
-}
-*/
 
 /* ======================== */
 /* Video & Image Background */
@@ -112,7 +99,6 @@ p {
 .hero img {
   width: 80%; /* Justera storlek efter behov */
   height: auto; /* Behåller bildens proportioner */
-  margin: 20px 0; /* Lägger till lite luft ovanför och under bilden */
 }
 
 .video-background, .image-background {
@@ -134,14 +120,6 @@ p {
   height: 100%;
   object-fit: cover;
 }
-
-/*.label-bg {
-  background: url('ABG.webp') center/cover no-repeat;
-}
-
-.farm-bg {
-  background: url('far.jpg') center/cover no-repeat;
-}*/
 
 /* =================== */
 /* Centered Content */
