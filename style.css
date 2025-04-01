@@ -161,6 +161,7 @@ p {
 .links a, .links-main a, .header-title a {
   font-family: 'orator', monospace;
   font-weight: 200;
+  font-size: 1rem;
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
