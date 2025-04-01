@@ -100,7 +100,7 @@ p {
 /* ======================== */
 
 .hero {
-  left: 50%;
+  /*left: 50%;*/
   width: 65%;
   height: auto; /* Adjusts the height proportionally */
   display: block;
