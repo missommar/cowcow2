@@ -101,7 +101,7 @@ p {
 
 .hero {
   /*left: 50%;*/
-  width: 65%;
+  width: 80%;
   height: auto; /* Adjusts the height proportionally */
   display: block;
   position: relative; /* Keeps it in the document flow */
