@@ -97,7 +97,7 @@ p {
 
 
 .hero img {
-  width: 80%; /* Justera storlek efter behov */
+  width: 100%; /* Justera storlek efter behov */
   height: auto; /* Behåller bildens proportioner */
 }
 
@@ -127,7 +127,6 @@ p {
 
 .title, .content {
   position: absolute;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
