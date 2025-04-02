@@ -136,7 +136,7 @@ p {
 .links a, .links-main a, .header-title a {
   font-family: 'orator', monospace;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 0.8rem;
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
@@ -224,6 +224,9 @@ footer a {
   .title h1 {
   font-size: 4rem;
 }
+  .links a{
+      font-size: 1rem;
+  }
   p {
     width: 45vw;
     line-height: 1.3;
