@@ -112,7 +112,7 @@ p {
 }
 
 .title h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   width: 100%;
 }
 
@@ -148,7 +148,7 @@ p {
 }
 
 .links-main {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: relative;
   z-index: 2; /* Ensures the links appear above the image */
   text-align: center;
