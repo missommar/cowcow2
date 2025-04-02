@@ -240,7 +240,7 @@ footer a {
 
 @media only screen and (min-width: 768px) {
   .title h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     max-height: 80px;
   }
   .content h2 {
