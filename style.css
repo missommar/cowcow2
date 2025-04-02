@@ -88,8 +88,17 @@ p {
   /* background-image: url('hen.JPG');  Fallback image */
   background-size: cover;
   background-position: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .background-video, .label-bg, .farm-bg {
   position: absolute;
   top: 0;
