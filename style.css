@@ -134,6 +134,9 @@ p {
 /* ======================= */
 /* Navigation & Links */
 /* ======================= */
+.links{
+  width: 100%;
+}
 
 .links a, .links-main a, .header-title a {
   font-family: 'orator', monospace;
