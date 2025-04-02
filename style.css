@@ -135,8 +135,12 @@ p {
 /* ======================= */
 /* Navigation & Links */
 /* ======================= */
-.links{
-  width: 100%;
+.links {
+  white-space: nowrap;        /* Prevents line breaks */
+  display: flex;              /* Aligns links in a row */
+  justify-content: center;    /* Centers them horizontally */
+  /*gap: 10px;                  /* Adds spacing between links */*/
+  flex-wrap: wrap;            /* Allows wrapping if necessary */
 }
 
 .links a, .links-main a, .header-title a {
