@@ -110,7 +110,7 @@ p {
 }
 
 .title h1 {
-  font-size: 8vw;
+  font-size: 2rem;
   width: 100%;
 }
 
@@ -221,6 +221,9 @@ footer a {
 /* =============== */
 
 @media only screen and (min-width: 768px) {
+  .title h1 {
+  font-size: 4rem;
+}
   p {
     width: 45vw;
     line-height: 1.3;
