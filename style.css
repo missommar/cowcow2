@@ -44,7 +44,9 @@ p {
   font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
   font-weight: normal;
   scroll-behavior: smooth;
-  width: 80vw;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 90vw;
   line-height: 1.3;
 }
 
