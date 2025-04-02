@@ -17,30 +17,6 @@ body, html {
   overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
-/* ================= */
-/* Font Definitions */
-/* ================= */
-
-@font-face {
-  font-family: 'CustomFont';
-  src: url('bnp.woff2') format('woff2'), url('bnp.woff') format('woff');
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: 'GT_custom_italic';
-  src: url('GT-italic.woff2') format('woff2'), url('GT-italic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'GT_custom';
-  src: url('GT-book.woff2') format('woff2'), url('GT-book.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'orator';
-  src: url('orator.woff2') format('woff2'), url('orator.woff') format('woff');
-}
 
 /* ================= */
 /* Typography Styles */
@@ -95,7 +71,6 @@ p {
   padding: 20px 20px;      /* Lägger till lite luft runt */
 }
 
-
 .hero img {
   width: 100%; /* Justera storlek efter behov */
   height: auto; /* Behåller bildens proportioner */
@@ -107,7 +82,7 @@ p {
   height: 100vh;
   overflow: hidden;
   background-color: black;
-  background-image: url('hen.JPG'); /* Fallback image */
+  /* background-image: url('hen.JPG');  Fallback image */
   background-size: cover;
   background-position: center;
 }
@@ -177,15 +152,18 @@ p {
   text-align: center;
   margin-top: 2px;
 }
+
 #active-link{
   text-decoration: underline;
 }
+
 .links a:hover, .links-main a:hover, footer a:hover, .header-title a:hover {
   color: whitesmoke;
   text-decoration: underline;
   background-color: rgba(222, 222, 222, 0.1);
   backdrop-filter: blur(4px);
 }
+
 
 /* ============= */
 /* Footer Styles */
@@ -210,6 +188,32 @@ footer a {
   padding: 5px 10px;
   border-radius: 3px;
   transition: background-color 0.3s ease;
+}
+
+
+/* ================= */
+/* Font Definitions */
+/* ================= */
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('bnp.woff2') format('woff2'), url('bnp.woff') format('woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'GT_custom_italic';
+  src: url('GT-italic.woff2') format('woff2'), url('GT-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GT_custom';
+  src: url('GT-book.woff2') format('woff2'), url('GT-book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'orator';
+  src: url('orator.woff2') format('woff2'), url('orator.woff') format('woff');
 }
 
 /* =============== */
