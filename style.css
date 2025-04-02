@@ -46,6 +46,7 @@ p {
   scroll-behavior: smooth;
   text-align: justify;
   text-justify: inter-word;
+  text-align-last: center;
   width: 90vw;
   line-height: 1.3;
 }
