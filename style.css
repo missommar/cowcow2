@@ -52,19 +52,73 @@ p {
 /* Header - "Cowcow" Title & Nav */
 /* ==================================================================================== */
 
-.header-title {
+/* old .header-title {
   position: relative;
-  z-index: 2; /* Ensures the title stays above the image */
+  z-index: 4; Ensures the title stays above the image 
   text-align: center;
   padding: 20px 0;
+}*/
+.header-title {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  color: white;
+  display: flex;
 }
 
+.header-title h1 {
+  font-size: 3rem;
+  margin-bottom: 10px; /* space between title and links */
+}
+.header-title a {
+  font-family: 'orator', monospace;
+  font-weight: 200;
+  font-size: 1rem;
+  color: white;
+  margin: 0 0.4rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.title {
+  position: fixed;
+  top: calc(20px + 3rem); /* roughly 20px below the header title */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.links a {
+  font-family: 'orator', monospace;
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.title h1 {
+  font-size: 3rem;
+  max-height: 50px;
+  width: 100%;
+}
 
 /* ==================================================================================== */
 /* Video & Image Background */
 /* ==================================================================================== */
 
 .hero {
+   z-index: -1;    /* place behind other content */
   display: flex;
   flex-direction: column;  /* Staplar elementen vertikalt */
   align-items: center;     /* Centrerar dem horisontellt */
@@ -73,30 +127,44 @@ p {
 }
 
 .hero img {
+    z-index: -1;    /* place behind other content */
   width: 100%; /* Justera storlek efter behov */
   height: auto; /* Behåller bildens proportioner */
 }
 
-.video-background, .image-background {
-  position: relative;
+.video-background {
+  position: fixed;        /* make it cover the whole viewport */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100vh;          /* full viewport height */
   overflow: hidden;
+  z-index: 0;             /* behind all content, but above body background */
   background-color: black;
-  /* background-image: url('hen.JPG');  Fallback image */
+  animation: fadeIn 1s ease-in-out forwards; /* optional fade-in effect */
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* ensures the video fills and crops properly */
+}
+
+.image-background {
+  position: fixed;
+  inset: 0;                       /* top:0; right:0; bottom:0; left:0 */
+  z-index: 0;                     /* <- use 0 (not -1) so it isn't hidden */
+  background-image: url('./AMANDA03.jpg'); /* add ./ or correct folder if needed */
   background-size: cover;
-  background-position: center;
-  opacity: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: black;
   animation: fadeIn 1s ease-in-out forwards;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 .background-video, .label-bg, .farm-bg {
   position: absolute;
   top: 0;
@@ -106,28 +174,62 @@ p {
   object-fit: cover;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* ==================================================================================== */
 /* Centered Content */
 /* ==================================================================================== */
 
-.title, .content {
+/*.content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-}
-
-.content{
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-.title h1 {
-  font-size: 3rem;
-  max-height: 50px;
-  width: 100%;
+.title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  color: whitesmoke;
+  text-decoration: underline;
+  background-color: rgba(222, 222, 222, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 5px;
+}*/
+
+
+
+.content {
+  /* ensure content sits above the fixed video background */
+  position: relative;
+  z-index: 2;             /* must be higher than .video-background (0) */
+  min-height: 100vh;      /* fill viewport so centering works */
+  display: flex;
+  align-items: center;    /* vertical center */
+  justify-content: center;/* horizontal center */
+  text-align: center;
+  padding: 2rem;
+  color: white;           /* ensure text is visible over the video */
+  /* disable any opacity hiding from shared fadeIn keyframe on this element */
+  opacity: 1 !important;
+  animation: none !important;
 }
 
 .content h1 {
@@ -145,46 +247,221 @@ p {
   margin: 15px 0;
 }
 
+/* ensure links/nav below the paragraph and centered */
+.content .links {
+  width: 100%;
+  display: flex;            /* keep centered layout */
+  justify-content: center;  /* center horizontally */
+  margin-top: 1.5rem;       /* space below text */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* optional: make single link appear like a block if you want it on its own line */
+.content .links .page-links {
+  display: inline-block;
+  /* add more spacing or styling if needed */
+}
+
+/*==========================*/
+/* Modal styling           */
+/*==========================*/
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #444;
+    cursor: pointer;
+  }
+
+  /*==========================*/
+/* mail chimp styling           */
+/*==========================*/
+.mc-field-group{
+  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+}
+  /* Container */
+#mc_embed_signup {
+    background: #fefefe;        /* Background color */
+ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+    font-size: 16px;             /* Font size */
+    color: #333;                 /* Text color */
+    margin: 20px auto;           /* Margin outside (centers form horizontally) */
+    border-radius: 8px;          /* Optional rounded corners */
+}
+
+/* Headings */
+#mc_embed_signup h2 {
+font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+
+/* Labels */
+#mc_embed_signup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input fields */
+#mc_embed_signup input[type="email"],
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="number"] {
+  font-family: 'orator', monospace;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+#mc_embed_signup input[type="submit"] {
+  background-color: #000000;
+  font-family: 'orator', monospace;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#mc_embed_signup input[type="submit"]:hover {
+    background-color: #434343;
+}
+
+/* Helper text / required asterisk */
+#mc_embed_signup .asterisk {
+    color: red;
+    margin-left: 2px;
+}
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+/* ==================================================================================== */
+/* Tour styling */
+/* ==================================================================================== */
+
+main {
+  max-width: 700px;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.artist {
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+table {
+  color: white;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+td {
+  padding: 0.5rem 0;
+  
+}
+
+td:nth-child(1) {
+  width: 20%;
+  padding: 0.5rem;
+}
+
+td:nth-child(2) {
+  width: 20%;
+  padding: 0.5rem;
+}
+
+td:nth-child(3) {
+  width: 5%;
+  padding: 0.5rem;
+}
+
+td:nth-child(4) {
+  width: 10%;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+a {
+  color: #fbff0a;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
 /* ==================================================================================== */
 /* Navigation & Links */
 /* ==================================================================================== */
-.links {
-  white-space: nowrap;        /* Prevents line breaks */
-  display: flex;              /* Aligns links in a row */
-  justify-content: center;    /* Centers them horizontally */
-  /*gap: 10px;                  /* Adds spacing between links */*/
-  flex-wrap: wrap;            /* Allows wrapping if necessary */
-}
 
-.links a, .links-main a, .header-title a {
-  font-family: 'orator', monospace;
-  font-weight: 200;
-  font-size: 1rem;
-  display: inline-block;
-  padding: 0.25em 0.5em;
-  text-decoration: none;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-}
-
-.links-main {
-  font-size: 1.2rem;
-  position: relative;
-  z-index: 2; /* Ensures the links appear above the image */
+/*.links-main {
+  position: fixed;
+  top: calc(20px + 3rem + 10px); 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
   text-align: center;
-  margin-top: 2px;
-}
+  z-index: 4;
+}*/
 
 #active-link{
   text-decoration: underline;
 }
 
-.links a:hover, .links-main a:hover, footer a:hover, .header-title a:hover {
+.links a:hover, .links-main a:hover, footer a:hover, .header-title a:hover .title a:hover {
   color: whitesmoke;
   text-decoration: underline;
   background-color: rgba(222, 222, 222, 0.1);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
 
 
@@ -201,7 +478,15 @@ footer {
   padding: 40px 0;
   color: white;
 }
-
+.socials {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+}
 footer a {
   text-decoration: none;
   font-family: "orator", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -212,8 +497,30 @@ footer a {
   border-radius: 3px;
   transition: background-color 0.3s ease;
 }
+/* ==================================================================================== */
+/* Farm page specific styles */
+/* ==================================================================================== */
 
+.farm-page .content {
+  flex-direction: column;   /* stack <p> then .links */
+  gap: 1.5rem;
+  align-items: center;      /* center children horizontally */
+  justify-content: center;  /* keep vertical centering */
+}
 
+.farm-page .content p {
+  width: min(80ch, 80%);    /* readable line length */
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* ensure links appear below the paragraph */
+.farm-page .content .links {
+  margin-top: 0;
+  justify-content: center;
+}
 /* ==================================================================================== */
 /* Font Definitions */
 /* ==================================================================================== */
@@ -258,13 +565,17 @@ footer a {
     font-size: 1.2rem;
   }
   .links-main a {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   p {
     width: 45vw;
     line-height: 1.3;
   }
   .content p {
-    font-size: 1rem;
+    font-size: 0.4rem;
   }
+  .farm-page .content p {
+  font-size: 1.2rem;
 }
+}
+
