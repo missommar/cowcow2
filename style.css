@@ -85,7 +85,7 @@ p {
 .title {
   position: fixed;
   top: calc(20px + 3rem); /* roughly 20px below the header title */
-  left: 50%;
+  left: 25%;
   transform: translateX(-50%);
   text-align: center;
   z-index: 3;
