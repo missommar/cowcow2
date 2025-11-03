@@ -66,7 +66,10 @@ p {
   text-align: center;
   z-index: 3;
   color: white;
-  white-space: nowrap;
+  display: flex;
+  gap: 0.8rem;          /* consistent spacing between links */
+  white-space: nowrap;  /* prevent text wrapping */
+  align-items: center;  /* vertically center the links */
 }
 
 .header-title h1 {
@@ -74,6 +77,8 @@ p {
   margin-bottom: 10px; /* space between title and links */
 }
 .header-title a {
+  display: inline-block;  /* better link spacing control */
+  padding: 0.2rem 0.4rem;
   font-family: 'orator', monospace;
   font-weight: 200;
   font-size: 1rem;
