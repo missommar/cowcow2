@@ -352,14 +352,14 @@ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
 #mc_embed_signup input[type="submit"] {
   background-color: #000000;
   font-family: 'orator', monospace;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 200;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 2px 5px 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #mc_embed_signup input[type="submit"]:hover {
