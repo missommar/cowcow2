@@ -310,11 +310,10 @@ p {
 }
   /* Container */
 #mc_embed_signup {
-    background: #c13b3b;        /* Background color */
     font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
     font-size: 16px;             /* Font size */
     color: #333;                 /* Text color */
-    margin: 20px auto;           /* Margin outside (centers form horizontally) */
+    margin: 2px auto;           /* Margin outside (centers form horizontally) */
     border-radius: 8px;          /* Optional rounded corners */
 }
 
@@ -329,6 +328,12 @@ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
 
 /* Labels */
 #mc_embed_signup label {
+    font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 200;
+    opacity: 0.8;
+    letter-spacing: 1px;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
