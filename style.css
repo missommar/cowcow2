@@ -445,12 +445,12 @@ td {
 }
 
 td:nth-child(1) {
-  width: 10%;
+  width: 20%;
   padding: 0.5rem;
 }
 
 td:nth-child(2) {
-  width: 25%;
+  width: 30%;
   padding: 0.5rem;
 }
 
@@ -460,7 +460,7 @@ td:nth-child(3) {
 }
 
 td:nth-child(4) {
-  width: 10%;
+  width: 2%;
   padding: 0.5rem;
   text-align: right;
 }
