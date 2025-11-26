@@ -415,7 +415,7 @@ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
 /* ==================================================================================== */
 
 .tablet{
-  margin-top: 7rem;
+  margin-top: 4rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -754,6 +754,9 @@ footer a {
 @media (max-width: 768px) {
   .tablet {
     margin-top: 7rem;
+  }
+   table{
+    font-size: 0.8rem;
   }
 }
 
