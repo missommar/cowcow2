@@ -15,8 +15,9 @@ body, html {
   width: 100%;
   background-color: black; /* Ensures no white borders */
   overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
-  overflow-y: hidden;
+  overflow-y: auto;
 }
+
 /* ==================================================================================== */
 /* Tooltip */
 /* ================= */
@@ -418,8 +419,16 @@ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+.tablet h3{
+  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 200;
+}
 main {
-  max-width: 700px;
+  max-width: 1000px;
   margin: auto;
   text-align: center;
 }
@@ -435,7 +444,7 @@ table {
   color: white;
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: left;
  
 }
@@ -470,7 +479,7 @@ tr a {
   font-family: orator, monospace;
   text-decoration: none;
   letter-spacing: -0.05rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 a:hover {
