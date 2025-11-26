@@ -752,9 +752,6 @@ footer a {
 
 /* smaller screens */
 @media (max-width: 768px) {
-  .tablet {
-    margin-top: 7rem;
-  }
    table{
     font-size: 0.8rem;
   }
