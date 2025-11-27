@@ -435,7 +435,7 @@ main {
 
 .artist {
   letter-spacing: 0.2em;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   margin-bottom: 1.2rem;
 }
@@ -486,22 +486,9 @@ a:hover {
   text-decoration: underline;
 }
 
-
 /* ==================================================================================== */
 /* Navigation & Links */
 /* ==================================================================================== */
-
-/*.links-main {
-  position: fixed;
-  top: calc(20px + 3rem + 10px); 
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  text-align: center;
-  z-index: 4;
-}*/
 
 #active-link{
   text-decoration: underline;
@@ -513,7 +500,6 @@ a:hover {
   background-color: rgba(222, 222, 222, 0.1);
   backdrop-filter: blur(8px);
 }
-
 
 /* ==================================================================================== */
 /* Footer Styles */
@@ -545,7 +531,7 @@ footer a {
   font-size: 0.8rem;
   margin: 2px;
   padding: 5px 10px;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
@@ -565,7 +551,7 @@ footer a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 2px;
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
@@ -577,9 +563,10 @@ footer a {
 }
 
 .socials a:hover {
-  transform: translateY(-3px);
-  color: #000000;   
-  background-color: #ffffff7a;
+ background: rgba(20, 20, 20, 0.6);
+ color: black;
+  backdrop-filter: blur(8px);
+  transform: translateY(-2px);
         /* highlight color */
 }
 
@@ -592,78 +579,96 @@ footer a {
 /* ==================================================================================== */
 /* announcement box */
 /* ==================================================================================== */
-.announcement-box {
+
+/* Announcement: image + links (links placed outside the box, below it) */
+.announcement-wrapper {
   position: fixed;
-  background-color: #F4E66A;
-  color: black;
-  padding: 0.8rem;
-  border-radius: 12px;
-  max-width: 180px;
-  z-index: 2;
   top: 48px;
   left: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  animation: fadeIn 1s ease-in-out forwards;
+  gap: 8px;
+  z-index: 2;
+  pointer-events: auto;
+  /* use a simple fade (only opacity) to avoid transform shifting */
+  animation: fadeInOpacity 600ms ease forwards;
 }
 
-.announcement-box h4{
-  font-family: 'neue-Haas-grotesk-display';
-  font-weight: 600;
-  letter-spacing: 0px;
+/* image-only box */
+.announcement-box {
+  padding: 0;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  max-width: 220px; /* adjust size */
+  width: 100%;
 }
 
-.announcement-box h5{
-  font-family: baskerville, serif;
-  font-size: 2rem;
-  font-weight:100;
-  letter-spacing: 4.8px;
-  font-style: italic;
-} 
-.announcement-box a{
-  font-family: orator, monospace;
-  font-size: 1rem;
-  font-weight:100;
-  letter-spacing: 0px;
-  font-style: italic;
-  color: black;
+/* responsive image */
+.announcement-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-.announcement-box-links{
+
+/* links below the image, visually outside the box */
+.announcement-links {
+  margin-top: 0.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-}
-.announcement-box-links a{
-  font-style: normal ;
+  background: transparent; /* keep outside box look */
 }
 
-/* ==================================================================================== */
-/* Farm page specific styles */
-/* ==================================================================================== */
-
-.farm-page .content {
-  flex-direction: column;   /* stack <p> then .links */
-  gap: 1.5rem;
-  align-items: center;      /* center children horizontally */
-  justify-content: center;  /* keep vertical centering */
+.announcement-links h4{
+  color: rgb(255, 255, 255);
+  font-family: GT_custom_italic, "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
 }
 
-.farm-page .content p {
-  width: min(80ch, 80%);    /* readable line length */
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 0.9rem;
-  line-height: 1.45;
+.announcement-links a {
+  color: rgb(255, 255, 255);
+  font-family: orator, monospace;
+  font-weight: 100;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
-/* ensure links appear below the paragraph */
-.farm-page .content .links {
-  margin-top: 0;
-  justify-content: center;
+.announcement-links a:hover {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(8px);
+  transform: translateY(-2px);
+}
+
+/* center wrapper on smaller screens */
+@media (max-width: 940px) {
+  .announcement-wrapper {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 320px;
+  }
+  .announcement-box{
+    max-width: 180px;
+  }
+}
+
+/* simple opacity-only fade to avoid layout/transform shifts */
+@keyframes fadeInOpacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ==================================================================================== */
@@ -724,21 +729,10 @@ footer a {
     font-size: 0.4rem;
   }
   .farm-page .content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 }
 
-/* Center on mobile screens */
-@media (max-width: 768px) {
-  .announcement-box {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 180px;
-    animation: fadeIn 1s ease-in-out forwards;
-  }
-}
 
 /* Keyframes for fadeIn */
 @keyframes fadeIn {
@@ -752,7 +746,7 @@ footer a {
 
 /* smaller screens */
 @media (max-width: 768px) {
-   table{
+  table{
     font-size: 0.8rem;
   }
 }
@@ -762,4 +756,3 @@ footer a {
   margin-top: 48px;
 }
 */
-
