@@ -413,6 +413,18 @@ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
 /* ==================================================================================== */
 /* Tour table styling */
 /* ==================================================================================== */
+.tablet-tour{
+  margin-top: 7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.tablet-tour h3{
+  font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: thinner;
+}
 
 .tablet{
   margin-top: 4rem;
@@ -427,6 +439,7 @@ font-family: "GT_custom", "GT Sectra", "Hoefler Text", "Times New Roman", serif;
   margin-bottom: 1rem;
   font-weight: 200;
 }
+
 main {
   max-width: 1000px;
   margin: auto;
