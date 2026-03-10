@@ -258,6 +258,7 @@ p {
   align-items: center;    /* vertical center */
   justify-content: center;/* horizontal center */
   text-align: center;
+  flex-direction: column;
   padding: 2rem;
   color: white;           /* ensure text is visible over the video */
   /* disable any opacity hiding from shared fadeIn keyframe on this element */
